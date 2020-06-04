@@ -3,5 +3,5 @@ Python App
 
 ## Run
 
-python test.py
+python app.py
 
