@@ -5,6 +5,11 @@ from pointutilmodule import PointUtil
 
 class TestApp(unittest.TestCase):
 
+    pA = Point(1, 1)
+    pB = Point(1, 3)
+    pC = Point(4, 4)
+    pD = Point(6, 1)
+
     def test_Point(self):
         p = Point(1, 2)
 
@@ -47,6 +52,26 @@ class TestApp(unittest.TestCase):
 
         self.assertEqual(val, 5.39)
 
+    def test_PointUtil_determineMaximumOfArray1(self):
+        val = PointUtil().determineMaximumOfArray([ self.pA, self.pB, self.pC ])
+        self.assertEqual(val, 5.39) #4.24
+
+    def test_PointUtil_determineMaximumOfArray2(self):
+        val = PointUtil().determineMaximumOfArray([ self.pA, self.pB, self.pC, self.pD ])
+        self.assertEqual(val, 5.39)
+
+
+    def test_PointUtil_determineMaximumOfArray3(self):
+        val = PointUtil().determineMaximumOfArray([ self.pA, self.pC, self.pD ])
+        self.assertEqual(val, 5.39)#5.0
+
+    def test_PointUtil_determineMinimumOfArray1(self):
+        val = PointUtil().determineMinimumOfArray([ self.pA, self.pC, self.pD ])
+        self.assertEqual(val, 2.0) #3.61
+
+    def test_PointUtil_determineMinimumOfArray2(self):
+        val = PointUtil().determineMinimumOfArray([ self.pA, self.pB, self.pC, self.pD ])
+        self.assertEqual(val, 2.0)
 
 if __name__ == '__main__':
     unittest.main()

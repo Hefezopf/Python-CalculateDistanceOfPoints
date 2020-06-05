@@ -41,3 +41,46 @@ class PointUtil:
 
     def determineMaximumOfArray(self, points):
         return 5.39
+
+	# private static double limitValue(double value, int digits) {
+	# 	double erg = 0;
+	# 	NumberFormat nf = NumberFormat.getInstance(Locale.ENGLISH);
+	# 	nf.setMinimumFractionDigits(digits);
+	# 	nf.setMaximumFractionDigits(digits);
+	# 	try {
+	# 		String s = nf.format(value);
+	# 		Double ergAsObj = new Double(s);
+	# 		erg = ergAsObj.doubleValue();
+	# 	} catch (NumberFormatException e) {
+	# 		e.printStackTrace();
+	# 	}
+	# 	return erg;
+	# }
+    def __limitValue(self, value, digits):
+        return 1.01    
+
+	# private static double calculateMaximum(Point[] points, Point startPoint, double max, int startVal) {
+	# 	for (int i = startVal + 1; i < points.length; i++) {
+	# 		double maxTemp = determineDistance(startPoint, points[i]);
+	# 		if (maxTemp > max) {
+	# 			max = maxTemp;
+	# 		}
+	# 	}
+
+	# 	return max;
+	# }
+    def __calculateMaximum(self, points, startPoint, max, startVal):
+        return 9.99    
+
+	# private static double calculateMinimum(Point[] points, Point startPoint, double min, int startVal) {
+	# 	for (int i = startVal + 1; i < points.length; i++) {
+	# 		double minTemp = determineDistance(startPoint, points[i]);
+	# 		if (minTemp < min) {
+	# 			min = minTemp;
+	# 		}
+	# 	}
+
+	# 	return min;
+	# }        
+    def __calculateMinimum(self, points, startPoint, min, startVal):
+        return 1.11    
