@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import sys
+from point import Point
 
 def parseAllCoords(args):
    return [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)]
@@ -11,10 +12,7 @@ def determineMinimumOfArray(points):
 def determineMaximumOfArray(points):
    return 5.39
 
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+
 
 print("Start App...")
 
