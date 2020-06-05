@@ -18,3 +18,4 @@ maxDistanceOfArray = PointUtil().determineMaximumOfArray(points)
 
 print("Minimum distance of all points = ", str(minDistanceOfArray))
 print("Maximum distance of all points = ", str(maxDistanceOfArray))
+
