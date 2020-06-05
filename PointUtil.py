@@ -1,5 +1,6 @@
 from Point import Point
 
+
 class PointUtil:
 
     def parseAllCoords(self, args):
