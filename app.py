@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
 import sys
-import Point
-import PointUtil
+
 from Point import Point
 from PointUtil import PointUtil
 
