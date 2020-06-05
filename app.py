@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import sys
-from point import Point
+from Point import Point
 
 def parseAllCoords(args):
    return [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)]
