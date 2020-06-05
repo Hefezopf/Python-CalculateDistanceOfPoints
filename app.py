@@ -8,13 +8,12 @@ from PointUtil import PointUtil
 print("Start App...")
 
 if len(sys.argv) > 1:
-  points = PointUtil().parseAllCoords(sys.argv)
+    points = PointUtil().parseAllCoords(sys.argv)
 else:
-  points = [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)]
+    points = [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)]
 
 minDistanceOfArray = PointUtil().determineMinimumOfArray(points)
 maxDistanceOfArray = PointUtil().determineMaximumOfArray(points)
 
 print("Minimum distance of all points = ", str(minDistanceOfArray))
 print("Maximum distance of all points = ", str(maxDistanceOfArray))
-
