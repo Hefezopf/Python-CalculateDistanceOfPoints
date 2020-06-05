@@ -1,4 +1,4 @@
-from Point import Point
+from pointmodule import Point
 
 
 class PointUtil:

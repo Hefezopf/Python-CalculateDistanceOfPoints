@@ -1,7 +1,6 @@
 import unittest
-from Point import Point
-from PointUtil import PointUtil
-
+from pointmodule import Point
+from pointutilmodule import PointUtil
 
 class TestApp(unittest.TestCase):
 

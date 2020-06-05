@@ -2,8 +2,8 @@
 
 import sys
 
-from Point import Point
-from PointUtil import PointUtil
+from pointmodule import Point
+from pointutilmodule import PointUtil
 
 print("Start App...")
 
