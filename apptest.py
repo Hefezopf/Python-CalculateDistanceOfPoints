@@ -1,6 +1,4 @@
 import unittest
-import Point
-import PointUtil
 from Point import Point
 from PointUtil import PointUtil
 
