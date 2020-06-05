@@ -1,9 +1,9 @@
 {
-    "python.pythonPath": "C:\\Program Files\\Python27\\python.exe",
+    "python.pythonPath": "C:\\Users\\info\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./test",
+        ".",
         "-p",
         "*test.py"
     ],

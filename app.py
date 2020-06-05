@@ -22,20 +22,13 @@
 	# 	System.out.println("Maximum distance of all points = " + maxDistanceOfArray);
 	# }
 
-def printme( str ):
-   print str
-   return    
+# def printme( str ):
+#    print (str)
+#    return    
 
-printme("Start App...")
+print("Start App...")
 
 minDistanceOfArray = 9
 maxDistanceOfArray = 99
-print "Minimum distance of all points = ", str(minDistanceOfArray)
-print "Maximum distance of all points = ", str(maxDistanceOfArray)
-
-if True:
-    print "Answer"
-    print "True"
-else:
-    print "Answer"
-    print "False"
+print ("Minimum distance of all points = ", str(minDistanceOfArray))
+print ("Maximum distance of all points = ", str(maxDistanceOfArray))
