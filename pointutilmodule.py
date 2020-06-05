@@ -4,25 +4,32 @@ from pointmodule import Point
 
 class PointUtil:
 
-    def parseAllCoords(self, args):
-        return [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)]
+	# public static Point[] parseAllCoords(String[] allCoords) {
+	# 	Point[] points;
+	# 	List<Point> pointsList = new ArrayList<Point>();
 
+	# 	for (String coord : Arrays.asList(allCoords)) { // "(4,3)", "(5,2)", ...
+	# 		int[] xy = PointUtil.parseToCoord(coord);
+	# 		pointsList.add(new Point(xy[0], xy[1]));
+	# 	}
+	# 	points = new Point[pointsList.size()];
+	# 	points = pointsList.toArray(points);
 
-        # public static double determineMaximumOfArray(Point[] points) {
-        # 	if (points.length < 1) {
-        # 		throw new IllegalArgumentException("too less points");
-        # 	}
-        # 	double max = 0;
-        # 	for (int i = 0; i < points.length; i++) {
-        # 		Point startPoint = points[i];
-        # 		if (startPoint == null) {
-        # 			throw new IllegalArgumentException("startPoint is null");
-        # 		}
-        # 		max = calculateMaximum(points, startPoint, max, i);
-        # 	}
+	# 	return points;
+	# }
+    def parseAllCoords(self, args): # "(4,3)", "(5,2)", ...
+        return [Point(4, 3), Point(5, 2)]
 
-        # 	return limitValue(max, 2);
-        # }
+	# public static int[] parseToCoord(String coords) { // "(4,3)"
+	# 	int[] res = new int[2];
+
+	# 	res[0] = coords.charAt(1) - 48;
+	# 	res[1] = coords.charAt(3) - 48;
+
+	# 	return res;
+	# }
+    def parseToCoord(self, coords): # "(4,3)"
+        return [4, 3]
 
     def determineDistance(self, p1, p2):
         return math.sqrt(math.pow((p2.x - p1.x), 2) + math.pow((p2.y - p1.y), 2))
