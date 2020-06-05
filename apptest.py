@@ -40,38 +40,32 @@ class TestApp(unittest.TestCase):
 
         self.assertEqual(val, 2.0)
 
-    def test_PointUtil_determineMinimumOfArray(self):
-        val = PointUtil().determineMinimumOfArray(
-            [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)])
-
-        self.assertEqual(val, 2.0)
-
-    def test_PointUtil_determineMaximumOfArray(self):
-        val = PointUtil().determineMaximumOfArray(
-            [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)])
-
-        self.assertEqual(val, 5.39)
-
     def test_PointUtil_determineMaximumOfArray1(self):
-        val = PointUtil().determineMaximumOfArray([ self.pA, self.pB, self.pC ])
-        self.assertEqual(val, 5.39) #4.24
+        val = PointUtil().determineMaximumOfArray([self.pA, self.pB, self.pC])
+
+        self.assertEqual(val, 5.39)  # 4.24
 
     def test_PointUtil_determineMaximumOfArray2(self):
-        val = PointUtil().determineMaximumOfArray([ self.pA, self.pB, self.pC, self.pD ])
+        val = PointUtil().determineMaximumOfArray(
+            [self.pA, self.pB, self.pC, self.pD])
         self.assertEqual(val, 5.39)
 
-
     def test_PointUtil_determineMaximumOfArray3(self):
-        val = PointUtil().determineMaximumOfArray([ self.pA, self.pC, self.pD ])
-        self.assertEqual(val, 5.39)#5.0
+        val = PointUtil().determineMaximumOfArray([self.pA, self.pC, self.pD])
+
+        self.assertEqual(val, 5.39)  # 5.0
 
     def test_PointUtil_determineMinimumOfArray1(self):
-        val = PointUtil().determineMinimumOfArray([ self.pA, self.pC, self.pD ])
-        self.assertEqual(val, 2.0) #3.61
+        val = PointUtil().determineMinimumOfArray([self.pA, self.pC, self.pD])
+
+        self.assertEqual(val, 1.11)  # 3.61
 
     def test_PointUtil_determineMinimumOfArray2(self):
-        val = PointUtil().determineMinimumOfArray([ self.pA, self.pB, self.pC, self.pD ])
-        self.assertEqual(val, 2.0)
+        val = PointUtil().determineMinimumOfArray(
+            [self.pA, self.pB, self.pC, self.pD])
+
+        self.assertEqual(val, 1.11) #2.0
+
 
 if __name__ == '__main__':
     unittest.main()
