@@ -20,15 +20,15 @@ class PointUtil:
     # }
     def parseAllCoords(self, coords):  # "(4,3)", "(5,2)", ...
         liste = []
-        #for coord in coords:
-            #val = self.parseToCoord(coord)
-            #liste.append(val)
-        print(liste)
-        return [Point(4, 3), Point(5, 2)] #liste
+        # for coord in coords:
+        #val = self.parseToCoord(coord)
+        # liste.append(val)
+        #print(liste)
+        return [Point(4, 3), Point(5, 2)]  # liste
 
     def parseToCoord(self, coord):  # "(4,3)"
         res = arr.array('l', [1, 2])
-        print(coord)
+        #print(coord)
         res[0] = int(coord[1])
         res[1] = int(coord[3])
 
@@ -99,15 +99,13 @@ class PointUtil:
     def __calculateMaximum(self, points, startPoint, max, startVal):
         return 9.99
 
-        # private static double calculateMinimum(Point[] points, Point startPoint, double min, int startVal) {
-        # 	for (int i = startVal + 1; i < points.length; i++) {
-        # 		double minTemp = determineDistance(startPoint, points[i]);
-        # 		if (minTemp < min) {
-        # 			min = minTemp;
-        # 		}
-        # 	}
-
-        # 	return min;
-        # }
     def __calculateMinimum(self, points, startPoint, min, startVal):
-        return 1.11
+        i = startVal + 1
+        for point in points:
+            if i == len(points):
+                return min
+            minTemp = self.determineDistance(startPoint, points[i])
+            if minTemp < min:
+                min = minTemp
+            i = i + 1
+        return min

@@ -64,13 +64,13 @@ class TestApp(unittest.TestCase):
     def test_PointUtil_determineMinimumOfArray1(self):
         val = PointUtil().determineMinimumOfArray([self.pA, self.pC, self.pD])
 
-        self.assertEqual(val, 1.11)  # 3.61
+        self.assertEqual(val, 3.605551275463989) #3.61
 
     def test_PointUtil_determineMinimumOfArray2(self):
         val = PointUtil().determineMinimumOfArray(
             [self.pA, self.pB, self.pC, self.pD])
 
-        self.assertEqual(val, 1.11) #2.0
+        self.assertEqual(val, 2.0) 
 
 
 if __name__ == '__main__':
