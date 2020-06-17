@@ -18,14 +18,19 @@ class PointUtil:
 
     # 	return points;
     # }
-    def parseAllCoords(self, args):  # "(4,3)", "(5,2)", ...
-        return [Point(4, 3), Point(5, 2)]
+    def parseAllCoords(self, coords):  # "(4,3)", "(5,2)", ...
+        liste = []
+        #for coord in coords:
+            #val = self.parseToCoord(coord)
+            #liste.append(val)
+        print(liste)
+        return [Point(4, 3), Point(5, 2)] #liste
 
-    def parseToCoord(self, coords):  # "(4,3)"
+    def parseToCoord(self, coord):  # "(4,3)"
         res = arr.array('l', [1, 2])
-
-        res[0] = int(coords[1])
-        res[1] = int(coords[3])
+        print(coord)
+        res[0] = int(coord[1])
+        res[1] = int(coord[3])
 
         return res
 
@@ -46,63 +51,63 @@ class PointUtil:
 
         return self.__limitValue(min, 2)
 
-	# public static double determineMaximumOfArray(Point[] points) {
-	# 	if (points.length < 1) {
-	# 		throw new IllegalArgumentException("too less points");
-	# 	}
-	# 	double max = 0;
-	# 	for (int i = 0; i < points.length; i++) {
-	# 		Point startPoint = points[i];
-	# 		if (startPoint == null) {
-	# 			throw new IllegalArgumentException("startPoint is null");
-	# 		}
-	# 		max = calculateMaximum(points, startPoint, max, i);
-	# 	}
+        # public static double determineMaximumOfArray(Point[] points) {
+        # 	if (points.length < 1) {
+        # 		throw new IllegalArgumentException("too less points");
+        # 	}
+        # 	double max = 0;
+        # 	for (int i = 0; i < points.length; i++) {
+        # 		Point startPoint = points[i];
+        # 		if (startPoint == null) {
+        # 			throw new IllegalArgumentException("startPoint is null");
+        # 		}
+        # 		max = calculateMaximum(points, startPoint, max, i);
+        # 	}
 
-	# 	return limitValue(max, 2);
-	# }
+        # 	return limitValue(max, 2);
+        # }
     def determineMaximumOfArray(self, points):
         return self.__limitValue(5.39, 2)
 
-	# private static double limitValue(double value, int digits) {
-	# 	double erg = 0;
-	# 	NumberFormat nf = NumberFormat.getInstance(Locale.ENGLISH);
-	# 	nf.setMinimumFractionDigits(digits);
-	# 	nf.setMaximumFractionDigits(digits);
-	# 	try {
-	# 		String s = nf.format(value);
-	# 		Double ergAsObj = new Double(s);
-	# 		erg = ergAsObj.doubleValue();
-	# 	} catch (NumberFormatException e) {
-	# 		e.printStackTrace();
-	# 	}
-	# 	return erg;
-	# }
+        # private static double limitValue(double value, int digits) {
+        # 	double erg = 0;
+        # 	NumberFormat nf = NumberFormat.getInstance(Locale.ENGLISH);
+        # 	nf.setMinimumFractionDigits(digits);
+        # 	nf.setMaximumFractionDigits(digits);
+        # 	try {
+        # 		String s = nf.format(value);
+        # 		Double ergAsObj = new Double(s);
+        # 		erg = ergAsObj.doubleValue();
+        # 	} catch (NumberFormatException e) {
+        # 		e.printStackTrace();
+        # 	}
+        # 	return erg;
+        # }
     def __limitValue(self, value, digits):
         return value
 
-	# private static double calculateMaximum(Point[] points, Point startPoint, double max, int startVal) {
-	# 	for (int i = startVal + 1; i < points.length; i++) {
-	# 		double maxTemp = determineDistance(startPoint, points[i]);
-	# 		if (maxTemp > max) {
-	# 			max = maxTemp;
-	# 		}
-	# 	}
+        # private static double calculateMaximum(Point[] points, Point startPoint, double max, int startVal) {
+        # 	for (int i = startVal + 1; i < points.length; i++) {
+        # 		double maxTemp = determineDistance(startPoint, points[i]);
+        # 		if (maxTemp > max) {
+        # 			max = maxTemp;
+        # 		}
+        # 	}
 
-	# 	return max;
-	# }
+        # 	return max;
+        # }
     def __calculateMaximum(self, points, startPoint, max, startVal):
         return 9.99
 
-	# private static double calculateMinimum(Point[] points, Point startPoint, double min, int startVal) {
-	# 	for (int i = startVal + 1; i < points.length; i++) {
-	# 		double minTemp = determineDistance(startPoint, points[i]);
-	# 		if (minTemp < min) {
-	# 			min = minTemp;
-	# 		}
-	# 	}
+        # private static double calculateMinimum(Point[] points, Point startPoint, double min, int startVal) {
+        # 	for (int i = startVal + 1; i < points.length; i++) {
+        # 		double minTemp = determineDistance(startPoint, points[i]);
+        # 		if (minTemp < min) {
+        # 			min = minTemp;
+        # 		}
+        # 	}
 
-	# 	return min;
-	# }
+        # 	return min;
+        # }
     def __calculateMinimum(self, points, startPoint, min, startVal):
         return 1.11
