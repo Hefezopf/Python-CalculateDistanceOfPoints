@@ -1,4 +1,5 @@
 import math
+import array as arr
 from pointmodule import Point
 
 
@@ -20,16 +21,13 @@ class PointUtil:
     def parseAllCoords(self, args):  # "(4,3)", "(5,2)", ...
         return [Point(4, 3), Point(5, 2)]
 
-	# public static int[] parseToCoord(String coords) { // "(4,3)"
-	# 	int[] res = new int[2];
-
-	# 	res[0] = coords.charAt(1) - 48;
-	# 	res[1] = coords.charAt(3) - 48;
-
-	# 	return res;
-	# }
     def parseToCoord(self, coords):  # "(4,3)"
-        return [4, 3]
+        res = arr.array('l', [1, 2])
+
+        res[0] = int(coords[1])
+        res[1] = int(coords[3])
+
+        return res
 
     def determineDistance(self, p1, p2):
         return math.sqrt(math.pow((p2.x - p1.x), 2) + math.pow((p2.y - p1.y), 2))

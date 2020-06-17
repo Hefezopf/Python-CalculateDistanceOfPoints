@@ -18,7 +18,7 @@ As IDE you can use Visual Studio Code
 
 Run JUnit Tests
 
-**python apptest.py**
+**python apptest.py -v**
 
 
 ## Run

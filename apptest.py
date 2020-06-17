@@ -25,10 +25,16 @@ class TestApp(unittest.TestCase):
         self.assertEqual(val[1].y, 2)
 
     def test_PointUtil_parseToCoord(self):
-        val = PointUtil().parseToCoord("(4, 3)")
+        val = PointUtil().parseToCoord("(4,3)")
 
         self.assertEqual(val[0], 4)
         self.assertEqual(val[1], 3)
+
+    def test_PointUtil_parseToCoord2(self):
+        val = PointUtil().parseToCoord("(1,2)")
+
+        self.assertEqual(val[0], 1)
+        self.assertEqual(val[1], 2)
 
     def test_PointUtil_determineDistance1(self):
         val = PointUtil().determineDistance(Point(1, 1), Point(2, 2))
