@@ -51,23 +51,19 @@ class PointUtil:
 
         return self.__limitValue(min, 2)
 
-        # public static double determineMaximumOfArray(Point[] points) {
-        # 	if (points.length < 1) {
-        # 		throw new IllegalArgumentException("too less points");
-        # 	}
-        # 	double max = 0;
-        # 	for (int i = 0; i < points.length; i++) {
-        # 		Point startPoint = points[i];
-        # 		if (startPoint == null) {
-        # 			throw new IllegalArgumentException("startPoint is null");
-        # 		}
-        # 		max = calculateMaximum(points, startPoint, max, i);
-        # 	}
-
-        # 	return limitValue(max, 2);
-        # }
     def determineMaximumOfArray(self, points):
-        return self.__limitValue(5.39, 2)
+        if len(points) < 1:
+            raise ValueError("too less points")
+        else:
+            max = 0
+            for i in range(len(points)):
+                startPoint = points[i]
+                if startPoint is None:
+                    raise ValueError("startPoint is null")
+                else:
+                    max = self.__calculateMaximum(points, startPoint, max, i)
+
+        return self.__limitValue(max, 2)
 
         # private static double limitValue(double value, int digits) {
         # 	double erg = 0;
@@ -86,18 +82,16 @@ class PointUtil:
     def __limitValue(self, value, digits):
         return value
 
-        # private static double calculateMaximum(Point[] points, Point startPoint, double max, int startVal) {
-        # 	for (int i = startVal + 1; i < points.length; i++) {
-        # 		double maxTemp = determineDistance(startPoint, points[i]);
-        # 		if (maxTemp > max) {
-        # 			max = maxTemp;
-        # 		}
-        # 	}
-
-        # 	return max;
-        # }
     def __calculateMaximum(self, points, startPoint, max, startVal):
-        return 9.99
+        i = startVal + 1
+        for point in points:
+            if i == len(points):
+                return max
+            maxTemp = self.determineDistance(startPoint, points[i])
+            if maxTemp > max:
+                max = maxTemp
+            i = i + 1
+        return max
 
     def __calculateMinimum(self, points, startPoint, min, startVal):
         i = startVal + 1

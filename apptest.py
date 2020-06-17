@@ -49,17 +49,17 @@ class TestApp(unittest.TestCase):
     def test_PointUtil_determineMaximumOfArray1(self):
         val = PointUtil().determineMaximumOfArray([self.pA, self.pB, self.pC])
 
-        self.assertEqual(val, 5.39)  # 4.24
+        self.assertEqual(val, 4.242640687119285) #4.24
 
     def test_PointUtil_determineMaximumOfArray2(self):
         val = PointUtil().determineMaximumOfArray(
             [self.pA, self.pB, self.pC, self.pD])
-        self.assertEqual(val, 5.39)
+        self.assertEqual(val, 5.385164807134504) #5.39
 
     def test_PointUtil_determineMaximumOfArray3(self):
         val = PointUtil().determineMaximumOfArray([self.pA, self.pC, self.pD])
 
-        self.assertEqual(val, 5.39)  # 5.0
+        self.assertEqual(val, 5.0)
 
     def test_PointUtil_determineMinimumOfArray1(self):
         val = PointUtil().determineMinimumOfArray([self.pA, self.pC, self.pD])
