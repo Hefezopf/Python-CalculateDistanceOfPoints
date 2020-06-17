@@ -23,12 +23,12 @@ class PointUtil:
         # for coord in coords:
         #val = self.parseToCoord(coord)
         # liste.append(val)
-        #print(liste)
+        # print(liste)
         return [Point(4, 3), Point(5, 2)]  # liste
 
     def parseToCoord(self, coord):  # "(4,3)"
         res = arr.array('l', [1, 2])
-        #print(coord)
+        # print(coord)
         res[0] = int(coord[1])
         res[1] = int(coord[3])
 
@@ -65,22 +65,8 @@ class PointUtil:
 
         return self.__limitValue(max, 2)
 
-        # private static double limitValue(double value, int digits) {
-        # 	double erg = 0;
-        # 	NumberFormat nf = NumberFormat.getInstance(Locale.ENGLISH);
-        # 	nf.setMinimumFractionDigits(digits);
-        # 	nf.setMaximumFractionDigits(digits);
-        # 	try {
-        # 		String s = nf.format(value);
-        # 		Double ergAsObj = new Double(s);
-        # 		erg = ergAsObj.doubleValue();
-        # 	} catch (NumberFormatException e) {
-        # 		e.printStackTrace();
-        # 	}
-        # 	return erg;
-        # }
     def __limitValue(self, value, digits):
-        return value
+        return float("{:.{}f}".format(value, digits))
 
     def __calculateMaximum(self, points, startPoint, max, startVal):
         i = startVal + 1

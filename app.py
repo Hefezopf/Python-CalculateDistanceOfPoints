@@ -7,8 +7,8 @@ from pointutilmodule import PointUtil
 
 print("Start App...")
 
-#print(sys.argv[1:])
 if len(sys.argv) > 1:
+    print(sys.argv[1:])
     points = PointUtil().parseAllCoords(sys.argv[1:])
 else:
     points = [Point(1, 1), Point(1, 3), Point(4, 4), Point(6, 1)]
