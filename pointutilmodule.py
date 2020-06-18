@@ -1,4 +1,5 @@
 import math
+import sys
 import array as arr
 from pointmodule import Point
 
@@ -41,7 +42,7 @@ class PointUtil:
         if len(points) < 1:
             raise ValueError("too less points")
         else:
-            min = 999999
+            min = sys.maxsize
             for i in range(len(points)):
                 startPoint = points[i]
                 if startPoint is None:

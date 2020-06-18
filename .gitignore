@@ -1,7 +1,2 @@
 .vscode/settings.json
-__pycache__/apptest.cpython-38.pyc
-__pycache__/point.cpython-38.pyc
-.vscode/settings.json
-__pycache__/apptest.cpython-38.pyc
-__pycache__/pointmodule.cpython-38.pyc
-__pycache__/pointutilmodule.cpython-38.pyc
+__pycache__/*
