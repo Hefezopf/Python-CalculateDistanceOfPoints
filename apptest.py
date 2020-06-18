@@ -17,7 +17,7 @@ class TestApp(unittest.TestCase):
         self.assertEqual(p.y, 2)
 
     def test_PointUtil_parseAllCoords(self):
-        val = PointUtil().parseAllCoords([Point(4, 3), Point(5, 2)])
+        val = PointUtil().parseAllCoords(['(4,3)', '(5,2)'])
 
         self.assertEqual(val[0].x, 4)
         self.assertEqual(val[0].y, 3)

@@ -6,6 +6,7 @@ from pointutilmodule import PointUtil
 
 print("Start App...")
 
+print(sys.argv)
 if len(sys.argv) > 1:
     points = PointUtil().parseAllCoords(sys.argv[1:])
 else:
