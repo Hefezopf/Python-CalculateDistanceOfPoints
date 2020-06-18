@@ -6,30 +6,17 @@ from pointmodule import Point
 
 class PointUtil:
 
-    # public static Point[] parseAllCoords(String[] allCoords) {
-    # 	Point[] points;
-    # 	List<Point> pointsList = new ArrayList<Point>();
-
-    # 	for (String coord : Arrays.asList(allCoords)) { // "(4,3)", "(5,2)", ...
-    # 		int[] xy = PointUtil.parseToCoord(coord);
-    # 		pointsList.add(new Point(xy[0], xy[1]));
-    # 	}
-    # 	points = new Point[pointsList.size()];
-    # 	points = pointsList.toArray(points);
-
-    # 	return points;
-    # }
     def parseAllCoords(self, coords):  # "(4,3)", "(5,2)", ...
         liste = []
-        # for coord in coords:
-        #val = self.parseToCoord(coord)
-        # liste.append(val)
-        # print(liste)
-        return [Point(4, 3), Point(5, 2)]  # liste
+        for coord in coords:
+            val = self.parseToCoord(coord)
+            liste.append(Point(val[0], val[1]))
+
+        return liste
 
     def parseToCoord(self, coord):  # "(4,3)"
         res = arr.array('l', [1, 2])
-        # print(coord)
+
         res[0] = int(coord[1])
         res[1] = int(coord[3])
 
