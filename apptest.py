@@ -75,7 +75,7 @@ class TestApp(unittest.TestCase):
         val = PointUtil().determineMinimumOfArray(
             [self.pA, self.pB, self.pC, self.pD])
 
-        self.assertEqual(val, 2.00) 
+        self.assertEqual(val, 2.00)
 
 
 if __name__ == '__main__':
