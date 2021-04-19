@@ -65,3 +65,8 @@ https://github.com/Hefezopf/Python-CalculateDistanceOfPoints/actions
 Travis CI/CD build:
 
 https://travis-ci.com/github/Hefezopf/Python-CalculateDistanceOfPoints
+
+
+# Honor Open Source
+
+[Donate?](https://www.paypal.com/donate/?hosted_button_id=G2CERK22Q4QP8 "Donate?")
